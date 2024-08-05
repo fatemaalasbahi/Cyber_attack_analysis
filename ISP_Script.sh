@@ -8,4 +8,11 @@
 
 module load python/3.11.5
 
+virtualenv --no-download $SLURM_TIMDIR/env
+source $SLURM_TIMDIR/env/bin/activate
+pip install --no-index pandas numpy matplotlib seaborn re
 
+
+python Cyber_analysis.py
+
+deactivate
